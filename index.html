@@ -4,10 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<title>HTTP ALL THE THINGS</title>
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -17,6 +14,16 @@
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style type="text/css">
+      .code-head {
+        line-height: 1.8em;
+      }
+
+      h3 a {
+        color: #138a9c !important;
+      }
+    </style>
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -34,6 +41,7 @@
 
   <body class="reveal">
     <div class="slides">
+
       <section>
         <h1>HTTP ALL THE THINGS</h1>
         <div><span></span></div>
@@ -42,30 +50,63 @@
       </section>
 
       <section>
-        <h1>Me<br /><br /></h1>
-
-        <ul>
-          <li>Nate Abele</li>
-          <li>Former lead developer, CakePHP</li>
-          <li>Founder &amp; current lead developer, Lithium</li>
-          <li>Member, AngularUI</li>
-          <li><a href="http://twitter.com/nateabele">@nateabele</a></li>
-        </ul>
-        
-        <aside class="notes">
-          Thanks for having me, it's an honor to be here.
-        </aside>
+        <h1>Or:</h1>
+        <h3>You're Still Doing HTTP Rong</h3>
       </section>
 
       <section>
-        <h1>History</h1>
+
+        <section>
+          <h1>Me<br /><br /></h1>
+
+          <ul>
+            <li>Nate Abele</li>
+            <li>Former lead developer, CakePHP</li>
+            <li>Founder &amp; current lead developer, Lithium</li>
+            <li>Member, AngularUI</li>
+            <li><a href="http://twitter.com/nateabele">@nateabele</a></li>
+          </ul>
+
+          <aside class="notes">
+            Thanks for having me, it's an honor to be here.
+          </aside>
+        </section>
+
+        <section>
+          <h3>Thanks!</h3>
+          <ul>
+            <li class="fragment">Amazingly, I get paid for this stuff</li>
+            <li class="fragment">OS is magical because of people</li>
+            <li class="fragment">I'm not a peasant</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Life Lessons</h2>
+        </section>
+
+        <section>
+          <section>
+            <ul>
+              <li class="fragment">Be humble</li>
+              <li class="fragment">Don't be afraid to feel stupid</li>
+              <li class="fragment">The night is young</li>
+            </ul>
+          </section>
+        </section>
+
       </section>
 
-      <section><h1>1998: SOAP &amp; XML-RPC</h1></section>
-
       <section>
-        <h1>SOAP</h1>
-        <pre><code data-trim style="font-size: 95%;">
+        <section>
+          <h1>History</h1>
+        </section>
+
+        <section><h1>1998: SOAP &amp; XML-RPC</h1></section>
+
+        <section>
+          <h1>SOAP</h1>
+          <pre><code data-trim style="font-size: 95%;">
           &lt;?xml version="1.0"?&gt;
 &lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"&gt;
   &lt;soap:Header&gt;&lt;/soap:Header&gt;
@@ -75,14 +116,14 @@
     &lt;/m:SomeCommand&gt;
   &lt;/soap:Body&gt;
 &lt;/soap:Envelope&gt;
-        </code></pre>
-      </section>
+          </code></pre>
+        </section>
 
-      <section><h1><em>Or...</em></h1></section>
+        <section><h1><em>Or...</em></h1></section>
 
-      <section>
-        <h1>XML-RPC</h1>
-        <pre><code data-trim>
+        <section>
+          <h1>XML-RPC</h1>
+          <pre><code data-trim>
           &lt;?xml version="1.0"?&gt;
 &lt;methodCall&gt;
   &lt;methodName&gt;examples.getStateName&lt;/methodName&gt;
@@ -92,57 +133,63 @@
     &lt;/param&gt;
   &lt;/params&gt;
 &lt;/methodCall&gt;
-        </code></pre>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>:-(<br /><br /></h1>
+
+          <ul>
+            <li><tt>POST *</tt></li>
+            <li>Invocaction details in body</li>
+            <li>Format lock-in</li>
+            <li>No relationships</li>
+            <li>No discoverability</li>
+          </ul>
+
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your
+            presentation, but you can see them if you open the speaker
+            notes window (hit 's' on your keyboard).
+          </aside>
+
+        </section>
+
+        <section><h1>2000: REST</h1></section>
+
       </section>
 
       <section>
-        <h1>:-(<br /><br /></h1>
 
-        <ul>
-          <li><tt>POST *</tt></li>
-          <li>Invocaction details in body</li>
-          <li>Format lock-in</li>
-          <li>No relationships</li>
-          <li>No discoverability</li>
-        </ul>
+        <section>
+          <h1>REST Constraints<br /><br /></h1>
 
-        <aside class="notes">
-          Oh hey, these are some notes. They'll be hidden in your
-          presentation, but you can see them if you open the speaker
-          notes window (hit 's' on your keyboard).
-        </aside>
+          <ul>
+            <li>Client-Server</li>
+            <li>Stateless</li>
+            <li>Cacheable</li>
+            <li>Uniform Interface</li>
+            <li>Opaque Layering</li>
+            <li>Code-on-Demand</li>
+          </ul>
+        </section>
 
-      </section>
+        <section>
+          <h1>The 4 Levels<br /><br /></h1>
 
-      <section><h1>2000: REST</h1></section>
+          <ul>
+            <li>RPC over HTTP (i.e. SOAP)</li>
+            <li>Resources</li>
+            <li>Verbs</li>
+            <li><em>Hypermedia Controls</em></li>
+          </ul>
 
-      <section>
-        <h1>REST Constraints<br /><br /></h1>
+          <aside class="notes">
+            You've probably heard of the Richardson Maturity model or '4 levels of REST'<br /><br />
+            'Hypermedia' is the one everyone falls down on -- no one understood it well
+          </aside>
+        </section>
 
-        <ul>
-          <li>Client-Server</li>
-          <li>Stateless</li>
-          <li>Cacheable</li>
-          <li>Uniform Interface</li>
-          <li>Opaque Layering</li>
-          <li>Code-on-Demand</li>
-        </ul>
-      </section>
-
-      <section>
-        <h1>The 4 Levels<br /><br /></h1>
-
-        <ul>
-          <li>RPC over HTTP (i.e. SOAP)</li>
-          <li>Resources</li>
-          <li>Verbs</li>
-          <li><em>Hypermedia Controls</em></li>
-        </ul>
-
-        <aside class="notes">
-          You've probably heard of the Richardson Maturity model or '4 levels of REST'<br /><br />
-          'Hypermedia' is the one everyone falls down on -- no one understood it well
-        </aside>
       </section>
 
       <section>
@@ -160,7 +207,7 @@
       </section>
 
       <section>
-        <h1>¿Hypermedia?</h1>
+        <h1>Hypermedia?</h1>
 
         <ul>
           <li>Content negotiation</li>
@@ -174,46 +221,47 @@
       </section>
 
       <section>
-        <h1>Content negotiation<br /><br /></h1>
-        <p><tt>application/json</tt> ...?</p>
-        <p>&nbsp;</p>
-      </section>
+        <section>
+          <h1>Content negotiation<br /><br /></h1>
+          <p><tt>application/json</tt> ...?</p>
+          <p>&nbsp;</p>
+        </section>
 
-      <section>
-        <h1>Content negotiation<br /><br /></h1>
-        <p><tt><strike>application/json</strike></tt></p>
-        <p><strong>FALE</strong></p>
-      </section>
+        <section>
+          <h1>Content negotiation<br /><br /></h1>
+          <p><tt><strike>application/json</strike></tt></p>
+          <p><strong>FALE</strong></p>
+        </section>
 
-      <section>
-        <h1>Content negotiation<br /><br /></h1>
-        <h3>Better:</h3>
-        <p><tt>application/rss+xml</tt></p>
-      </section>
+        <section>
+          <h1>Content negotiation<br /><br /></h1>
+          <h3>Better:</h3>
+          <p><tt>application/rss+xml</tt></p>
+        </section>
 
-      <section>
-        <h1>Content negotiation<br /><br /></h1>
-        <h3>Better:</h3>
-        <p><tt>application/<span
-          style="color: blue; font-weight: bold;">rss</span>+<span style="color: green; font-weight: bold;">xml</span>
-        </tt></p>
-      </section>
+        <section>
+          <h1>Content negotiation<br /><br /></h1>
+          <h3>Better:</h3>
+          <p><tt>application/<span
+            style="color: blue; font-weight: bold;">rss</span>+<span style="color: green; font-weight: bold;">xml</span>
+          </tt></p>
+        </section>
 
-      <section>
-        <h1>Content negotiation<br /><br /></h1>
-        <p><tt>application/<span style="color: blue; font-weight: bold;">vnd.twitter.stream</span>+<span
-          style="color: green; font-weight: bold;">json</span></tt>
-        </p>
+        <section>
+          <h1>Content negotiation<br /><br /></h1>
+          <p><tt>application/<span style="color: blue; font-weight: bold;">vnd.twitter.stream</span>+<span
+            style="color: green; font-weight: bold;">json</span></tt>
+          </p>
 
-        <table style="width: 90%;">
-          <tr>
-            <td style="color: green; font-size: 65%;">
-              <br />
-              <tt>// I can decode this!</tt><br />
-              <tt>json_decode()</tt>
-            </td>
-            <td style="color: blue;">
-              <pre style="box-shadow: none; line-height: 170%;"><tt>/**
+          <table style="width: 90%;">
+            <tr>
+              <td style="color: green; font-size: 65%;">
+                <br />
+                <tt>// I can decode this!</tt><br />
+                <tt>json_decode()</tt>
+              </td>
+              <td style="color: blue;">
+                <pre style="box-shadow: none; line-height: 170%;"><tt>/**
  * I can understand this!
  */
 class Tweet {
@@ -222,36 +270,44 @@ class Tweet {
    // ...
 }
 </tt></pre>
-            </td>
-          </tr>
-        </table>
+              </td>
+            </tr>
+          </table>
+        </section>
+
       </section>
 
       <section>
-        <h1>State traversal</h1>
-      </section>
+        <section>
+          <h1>State traversal</h1>
+        </section>
 
-      <section>
-        <img src="img/statemachine.gif" style="background: none; border: 0; box-shadow: none;" />
-      </section>
+        <section>
+          <img src="img/statemachine.gif" style="background: none; border: 0; box-shadow: none;" />
 
-      <section>
-        <h1>Client: &#8220;What's next?&#8221;</h1>
-        
-        <aside class="notes">
-          - Where else can I get from here?<br />
-          - What's related?
-        </aside>
-      </section>
+          <aside class="notes">
+            Your API <em>structure</em> is a static definition of a state machine. It uses HTTP <em>messages</em>
+            to perform operations and communicate <em>state</em> to your API client
+          </aside>
+        </section>
 
-      <section>
-        <h1>We already do this!</h1>
-      </section>
+        <section>
+          <h1>Client: &#8220;What's next?&#8221;</h1>
 
-      <section>
-        <h1>Browsers</h1>
+          <aside class="notes">
+            - Where else can I get from here?<br />
+            - What's related?
+          </aside>
+        </section>
 
-        <pre style="margin-top: 3em;"><code data-trim style="font-size: 130%;">
+        <section>
+          <h1>We already do this!</h1>
+        </section>
+
+        <section>
+          <h1>Browsers</h1>
+
+          <pre style="margin-top: 3em;"><code data-trim style="font-size: 130%;">
           &lt;link rel="stylesheet" href="/css/app.css" /&gt;
 &lt;link rel="next" href="/next" /&gt;
 &lt;link
@@ -259,39 +315,41 @@ class Tweet {
    type="application/rss+xml"
    href="/posts.rss"
 /&gt;
-        </code></pre>
-      </section>
+          </code></pre>
+        </section>
 
-      <section>
-        <h1>Users</h1>
-        <h4>(with the help of browsers)</h4>
+        <section>
+          <h1>Users</h1>
+          <h4>(with the help of browsers)</h4>
 
-        <pre style="margin-top: 3em;"><code data-trim style="font-size: 130%;">
+          <pre style="margin-top: 3em;"><code data-trim style="font-size: 130%;">
 &lt;a href="/next" /&gt;Next&lt;/a&gt;
 &lt;form&gt;&lt;/form&gt;
-        </code></pre>
-      </section>
+          </code></pre>
+        </section>
 
-      <section>
-        <h1>Atom?</h1>
+        <section>
+          <h1>Atom?</h1>
 
-        <pre style="margin-top: 3em;"><code data-trim style="font-size: 160%;">
+          <pre style="margin-top: 3em;"><code data-trim style="font-size: 160%;">
 &lt;link
   rel="foo"
   type="text/foo"
   href="http://foo"
 /&gt;
-        </code></pre>
+          </code></pre>
 
-        <aside class="notes">
-          So what's the solution? Atom? A great standard, but... you're using XML :-P
-        </aside>
+          <aside class="notes">
+            So what's the solution? Atom? A great standard, but... you're using XML :-P
+          </aside>
+        </section>
       </section>
 
       <section>
-        <h1>JSON!</h1>
+        <section>
+          <h1>JSON!</h1>
 
-        <pre style="margin-top: 3em;"><code data-trim style="font-size: 115%;">[{
+          <pre style="margin-top: 3em;"><code data-trim style="font-size: 115%;">[{
   title: "Finish the demo",
   completed: false,
   $links: {
@@ -302,68 +360,70 @@ class Tweet {
 }]
 </code></pre>
 
-        <aside class="notes">
-          With a simple JSON structure, we can get the same benefits of named and annotated links
-        </aside>
+          <aside class="notes">
+            With a simple JSON structure, we can get the same benefits of named and annotated links
+          </aside>
+        </section>
+
+        <section>
+          <h1>Why?</h1>
+
+          <aside class="notes">
+            So, why is this stuff important? To answer that question, we're going to switch
+            to something completely different
+          </aside>
+        </section>
       </section>
 
       <section>
-        <h1>Why?</h1>
+        <section>
+          <h1>AngularJS</h1>
 
-        <aside class="notes">
-          So, why is this stuff important? To answer that question, we're going to switch
-          to something completely different
-        </aside>
-      </section>
+          <aside class="notes">
+            AngularJS is a very popular JavaScript framework, that's part of a new wave of
+            JavaScript frameworks
+          </aside>
+        </section>
 
-      <section>
-        <h1>AngularJS</h1>
+        <section>
+          <h1>Valid alternatives</h1>
 
-        <aside class="notes">
-          AngularJS is a very popular JavaScript framework, that's part of a new wave of
-          JavaScript frameworks
-        </aside>
-      </section>
+          <ul style="margin-top: 3em;">
+            <li>EmberJS</li>
+            <li>KnockoutJS</li>
+            <li>Backbone <em>(kind of, not really)</em></li>
+          </ul>
 
-      <section>
-        <h1>Valid alternatives</h1>
+          <aside class="notes">
+            That's not to say Backbone is bad, it's just not in the same class: it's
+            an organizing framework for jQuery
+          </aside>
+        </section>
 
-        <ul style="margin-top: 3em;">
-          <li>EmberJS</li>
-          <li>KnockoutJS</li>
-          <li>Backbone <em>(kind of, not really)</em></li>
-        </ul>
+        <section>
+          <h1>AngularJS</h1>
 
-        <aside class="notes">
-          That's not to say Backbone is bad, it's just not in the same class: it's
-          an organizing framework for jQuery 
-        </aside>
-      </section>
+          <ul style="margin-top: 3em;">
+            <li>Higher level of abstraction</li>
+            <li>Simple, well-designed architecture</li>
+            <li>Ridiculously simple unit testing</li>
+          </ul>
 
-      <section>
-        <h1>AngularJS</h1>
+          <aside class="notes">
+            AngularJS is a very popular JavaScript framework, that's part of a new wave of
+            JavaScript frameworks
+          </aside>
+        </section>
 
-        <ul style="margin-top: 3em;">
-          <li>Higher level of abstraction</li>
-          <li>Simple, well-designed architecture</li>
-          <li>Ridiculously simple unit testing</li>
-        </ul>
+        <section>
+          <h1>Event binding</h1>
+        </section>
 
-        <aside class="notes">
-          AngularJS is a very popular JavaScript framework, that's part of a new wave of
-          JavaScript frameworks
-        </aside>
-      </section>
+        <section>
+          <h1>Event binding</h1>
+          <h3>jQuery</h3>
 
-      <section>
-        <h1>Event binding</h1>
-      </section>
-
-      <section>
-        <h1>Event binding</h1>
-        <h3>jQuery</h3>
-
-        <pre style="margin-top: 3em;"><code data-trim style="font-size: 115%;">&lt;input type="text" id="name" /&gt;
+          <pre style="margin-top: 3em;"><code data-trim style="font-size: 115%;">&lt;input type="text" id="name" /&gt;
 <h1>Hello!</h1>
 
 &lt;script type="text/javascript"&gt;
@@ -373,111 +433,111 @@ class Tweet {
     });
   });
 &lt;/script&gt;</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1>Event binding</h1>
-        <h3>AngularJS</h3>
+        <section>
+          <h1>Event binding</h1>
+          <h3>AngularJS</h3>
 
-        <pre ng-non-bindable style="font-size: 90%; margin-top: 2em;"><code>&lt;input type="text" ng-model="name" /&gt;
+          <pre ng-non-bindable style="font-size: 90%; margin-top: 2em;"><code>&lt;input type="text" ng-model="name" /&gt;
 &lt;h1&gt;Hello {{ name }}!&lt;/h1&gt;</code></pre>
 
-        <input type="text" ng-model="name" class="title" />
-		<h1>Hello {{ name }}!</h1>
+          <input type="text" ng-model="name" class="title" />
+          <h1>Hello {{ name }}!</h1>
 
-      </section>
+        </section>
 
-      <section>
-        <h1>Iteration</h1>
-        <h3>jQuery</h3>
+        <section>
+          <h1>Iteration</h1>
+          <h3>jQuery</h3>
 
-        <pre ng-non-bindable style="font-size: 70%; margin-top: 2em;"><code><ul class="greetings"></ul>
+          <pre ng-non-bindable style="font-size: 70%; margin-top: 2em;"><code><ul class="greetings"></ul>
 
 &lt;script type="text/javascript"&gt;
   $(["Hello", "Hola", "Ciao"]).each(function(k, v) {
     $(".greeting").append("<li>" + v + " World</li>");
   });
 &lt;/script&gt;</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1>Iteration</h1>
-        <h3>AngularJS</h3>
+        <section>
+          <h1>Iteration</h1>
+          <h3>AngularJS</h3>
 
-        <pre ng-non-bindable style="font-size: 70%; margin-top: 2em;"><code>&lt;ul&gt;
+          <pre ng-non-bindable style="font-size: 70%; margin-top: 2em;"><code>&lt;ul&gt;
   &lt;li ng-repeat="greet in ['Hello', 'Hola', 'Ciao']"&gt;
     {{ greet }} World
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
 
-        <ul>
-          <li ng-repeat="greet in ['Hello', 'Hola', 'Ciao']">
-            {{ greet }} World
-          </li>
-        </ul>
-      </section>
+          <ul>
+            <li ng-repeat="greet in ['Hello', 'Hola', 'Ciao']">
+              {{ greet }} World
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <pre ng-non-bindable style="font-size: 70%; margin-top: 2em;"><code>&lt;ul&gt;
+        <section>
+          <pre ng-non-bindable style="font-size: 70%; margin-top: 2em;"><code>&lt;ul&gt;
   &lt;li ng-repeat="greet in ['Hello', 'Hola', 'Ciao']"&gt;
     {{ greet }} World
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
 
-        <ul>
-          <li ng-repeat="greet in ['Hello', 'Hola', 'Ciao']">
-            {{ greet }} {{ greetName || 'World' }}
-          </li>
-        </ul>
-        <br /><input type="text" ng-model="greetName" class="title" style="width: 35%; text-align: center;" />
-      </section>
+          <ul>
+            <li ng-repeat="greet in ['Hello', 'Hola', 'Ciao']">
+              {{ greet }} {{ greetName || 'World' }}
+            </li>
+          </ul>
+          <br /><input type="text" ng-model="greetName" class="title" style="width: 35%; text-align: center;" />
+        </section>
 
-      <section>
-        <h1>Organization</h1>
-        <h3>AngularJS</h3>
+        <section>
+          <h1>Organization</h1>
+          <h3>AngularJS</h3>
 
-        <br />
-        <div ng-controller="CheckoutController">
-          <div ng-repeat="item in items">
-            Item: <input type="text" ng-model="item.name" style="width: 175px;" />
-            Qty: <input type="number" ng-model="item.qty" />
-            Price: <input type="number" ng-model="item.price" />
-            Total: <div style="display: inline-block; width: 75px;">
-              {{ item.qty * item.price | currency: "$" }}
+          <br />
+          <div ng-controller="CheckoutController">
+            <div ng-repeat="item in items">
+              Item: <input type="text" ng-model="item.name" style="width: 175px;" />
+              Qty: <input type="number" ng-model="item.qty" />
+              Price: <input type="number" ng-model="item.price" />
+              Total: <div style="display: inline-block; width: 75px;">
+                {{ item.qty * item.price | currency: "$" }}
+              </div>
             </div>
+
+            <hr />
+            <div>Total: {{ total() | currency: "$" }}</div>
           </div>
 
-          <hr />
-          <div>Total: {{ total() | currency: "$" }}</div>
-        </div>
+          <script type="text/javascript">
+            function CheckoutController($scope) {
+              $scope.items = $scope.items || [{ price: 0, qty: 0 }];
+              $scope.customer = $scope.customer || {};
 
-        <script type="text/javascript">
-          function CheckoutController($scope) {
-            $scope.items = $scope.items || [{ price: 0, qty: 0 }];
-            $scope.customer = $scope.customer || {};
+              $scope.total = function() {
+                if ($scope.items[$scope.items.length - 1].qty) {
+                  $scope.items.push({ price: 0, qty: 0 });
+                }
 
-            $scope.total = function() {
-              if ($scope.items[$scope.items.length - 1].qty) {
-                $scope.items.push({ price: 0, qty: 0 });
-              }
+                return $scope.items.map(function(item) {
+                  return item.qty * item.price;
+                }).reduce(function(a, b) {
+                  return a + b;
+                });
+              };
+            }
+          </script>
+        </section>
 
-              return $scope.items.map(function(item) {
-                return item.qty * item.price;
-              }).reduce(function(a, b) {
-                return a + b;
-              });
-            };
-          }
-        </script>
-      </section>
+        <section>
+          <h1>Organization</h1>
+          <h3>AngularJS</h3>
 
-      <section>
-        <h1>Organization</h1>
-        <h3>AngularJS</h3>
-
-        <pre ng-non-bindable><code><div ng-controller="CheckoutController">
+          <pre ng-non-bindable><code><div ng-controller="CheckoutController">
   <div ng-repeat="item in items">
     Item: <input type="text" ng-model="item.name" />
     Qty: <input type="number" ng-model="item.qty" />
@@ -490,13 +550,13 @@ class Tweet {
   <hr />
   <div>Total: {{ total() | currency: "$" }}</div>
 </div></code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1>Organization</h1>
-        <h3>AngularJS</h3>
+        <section>
+          <h1>Organization</h1>
+          <h3>AngularJS</h3>
 
-        <pre ng-non-bindable><code style="font-size: 90%;">function CheckoutController($scope) {
+          <pre ng-non-bindable><code style="font-size: 90%;">function CheckoutController($scope) {
   $scope.items = $scope.items || [{ price: 0, qty: 0 }];
 
   $scope.total = function() {
@@ -510,38 +570,38 @@ class Tweet {
     });
   };
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1>Organization</h1>
-        <h3>jQuery</h3>
-      </section>
+        <section>
+          <h1>Organization</h1>
+          <h3>jQuery</h3>
+        </section>
 
-      <section>
-        <h1>Organization</h1>
-        <h3>jQuery</h3>
+        <section>
+          <h1>Organization</h1>
+          <h3>jQuery</h3>
 
-        <br />
-        <br />
-        <br />
-        <h4>¿Ummm...?</h4>
-      </section>
+          <br />
+          <br />
+          <br />
+          <h4>Ummm...?</h4>
+        </section>
 
-      <section>
-        <h1>Organization</h1>
-        <h3>jQuery</h3>
+        <section>
+          <h1>Organization</h1>
+          <h3>jQuery</h3>
 
-        <br />
-        <br />
-        <br />
-        <h4>*shrug*</h4>
-      </section>
+          <br />
+          <br />
+          <br />
+          <h4>*shrug*</h4>
+        </section>
 
-      <section>
-        <h1>Testability</h1>
-        <h3>AngularJS</h3>
+        <section>
+          <h1>Testability</h1>
+          <h3>AngularJS</h3>
 
-        <pre ng-non-bindable><code style="font-size: 90%;">describe("Shopping cart", function() {
+          <pre ng-non-bindable><code style="font-size: 90%;">describe("Shopping cart", function() {
 
   describe("Checkout widget", function() {
 
@@ -555,13 +615,13 @@ class Tweet {
     });
   });
 });</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1>Testability</h1>
-        <h3>AngularJS</h3>
+        <section>
+          <h1>Testability</h1>
+          <h3>AngularJS</h3>
 
-        <pre ng-non-bindable><code style="font-size: 90%;">describe("Shopping cart", function() {
+          <pre ng-non-bindable><code style="font-size: 90%;">describe("Shopping cart", function() {
 
   describe("Checkout widget", function() {
     // ...
@@ -576,26 +636,29 @@ class Tweet {
     });
   });
 });</code></pre>
+        </section>
+
+        <section>
+          <h1>jQuery...?</h1>
+
+          <aside class="notes">
+            Let's not even go there.
+          </aside>
+        </section>
+
       </section>
 
       <section>
-        <h1>¿jQuery...?</h1>
+        <section>
+          <h1>AngularJS + HTTP Resources</h1>
+        </section>
 
-        <aside class="notes">
-          Let's not even go there.
-        </aside>
-      </section>
+        <section>
+          <h1><tt>$resource()</tt></h1>
+        </section>
 
-      <section>
-        <h1>AngularJS + HTTP Resources</h1>
-      </section>
-
-      <section>
-        <h1><tt>$resource()</tt></h1>
-      </section>
-
-      <section>
-        <pre ng-non-bindable><code style="font-size: 120%;">var Task = $resource("http://my.api/tasks/:id", {
+        <section>
+          <pre ng-non-bindable><code style="font-size: 120%;">var Task = $resource("http://my.api/tasks/:id", {
   id: "@id"
 });
 
@@ -606,10 +669,10 @@ var newTask = new Task({
 
 /* POST /tasks { "title": "New Task", ... } */
 newPost.$save();</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <pre ng-non-bindable><code style="font-size: 120%;" class="language-js">/* GET /tasks/5 */
+        <section>
+          <pre ng-non-bindable><code style="font-size: 120%;" class="language-js">/* GET /tasks/5 */
 var oneTask = Task.get({ id: 5 });
 
 /* GET /tasks?completed=false&due=1381158984 */
@@ -617,123 +680,118 @@ var current = Task.query({
   completed: false,
   description: "..."
 });</code></pre>
-      </section>
+        </section>
 
-      <section>
+        <section>
+          <h1>¡No me gusta!</h1>
 
-        <h1>¡Muy mal!</h1>
-        <h1>¡No me gusta!</h1>
-        <h1>¡Eso es shinaniganos!</h1>
+          <aside class="notes">
+            This allows and even encourages bad API design
+          </aside>
+        </section>
 
-        <aside class="notes">
-          This allows and even encourages bad API design
-        </aside>
-      </section>
-      
+        <section>
+          <h1>Tight coupling</h1>
 
-      <section>
-        <h1>Tight coupling</h1>
+          <ul style="margin-top: 1.5em;">
+            <li>Client-side URL templates</li>
+            <li>Excessive parameters</li>
+            <li>No links!</li>
+          </ul>
 
-        <ul style="margin-top: 1.5em;">
-          <li>Client-side URL templates</li>
-          <li>Excessive parameters</li>
-          <li>No links!</li>
-        </ul>
+          <aside class="notes">
+            - Clients should never ever ever have to generate URLs client-side<br />
+            <em>(Yes, I know there's an RFC around URL templates, I'm not a huge fan because it
+              feels hacky and I think it's a symptom of bad design)</em><br />
+            - Mitigate lots of parameters by anticipating user <strong>intent</strong>
+            - As we saw earlier, links allow clients to discover other things they can do
+              with your system
+          </aside>
+        </section>
 
-        <aside class="notes">
-          - Clients should never ever ever have to generate URLs client-side<br />
-          <em>(Yes, I know there's an RFC around URL templates, I'm not a huge fan because it
-            feels hacky and I think it's a symptom of bad design)</em><br />
-          - Mitigate lots of parameters by anticipating user <strong>intent</strong>
-          - As we saw earlier, links allow clients to discover other things they can do
-            with your system
-        </aside>
-      </section>
+        <section>
+          <h1>Intent</h1>
 
-      <section>
-        <h1>Intent</h1>
-        
-        <aside class="notes">
-          What does your user (or API client) want to <em>do</em>?
-        </aside>
-      </section>
+          <aside class="notes">
+            What does your user (or API client) want to <em>do</em>?
+          </aside>
+        </section>
 
-      <section>
-        <h3 style="line-height: 1.8em;"><tt>
-          /tasks?<br />completed=false<br />&amp;due=1381158984
-        </tt></h3>
+        <section>
+          <h3 class="code-head"><tt>
+            /tasks?<br />completed=false<br />&amp;due=1381158984
+          </tt></h3>
 
-        <aside class="notes">
-          - What does this do?<br />
-          - What does that mean?
-        </aside>
-      </section>
+          <aside class="notes">
+            - What does this do?<br />
+            - What does that mean?
+          </aside>
+        </section>
 
-      <section>
-        <h1>No meaning</h1>
-      </section>
+        <section>
+          <h1>No meaning</h1>
+        </section>
 
-      <section>
-        <h3><tt>/tasks/current</tt></h3>
+        <section>
+          <h3><tt>/tasks/current</tt></h3>
 
-        <aside class="notes">
-          - These are the tasks that are due next week<br />
-          - These are the things I need to <em>focus on</em><br />
-          - This is an important aspect of the design of APIs, but <em>especially</em> HTTP APIs<br />
-          - Providing an HTTP interface to do CRUD operations on your database is <em>bad design!</em><br />
-          - Less brittle: you can change implementation details without breaking the interface
-        </aside>
-      </section>
+          <aside class="notes">
+            - These are the tasks that are due next week<br />
+            - These are the things I need to <em>focus on</em><br />
+            - This is an important aspect of the design of APIs, but <em>especially</em> HTTP APIs<br />
+            - Providing an HTTP interface to do CRUD operations on your database is <em>bad design!</em><br />
+            - Less brittle: you can change implementation details without breaking the interface
+          </aside>
+        </section>
 
-      <section>
-        <h3><tt>/tasks/:id</tt></h3>
+        <section>
+          <h3><tt>/tasks/:id</tt></h3>
 
-        <aside class="notes">
-          - So what about client-side URL templates? Why are they a problem?<br />
-          - Let's take a look at a different example
-        </aside>
-      </section>
+          <aside class="notes">
+            - So what about client-side URL templates? Why are they a problem?<br />
+            - Let's take a look at a different example
+          </aside>
+        </section>
 
-      <section>
-        <strong><tt style="font-size: 90%;">$resource("/posts/:id", {id: "@id"});</tt><br /><br /></strong>
-        <pre ng-non-bindable><code style="font-size: 120%;" class="language-js">{
+        <section>
+          <strong><tt style="font-size: 90%;">$resource("/posts/:id", {id: "@id"});</tt><br /><br /></strong>
+          <pre ng-non-bindable><code style="font-size: 120%;" class="language-js">{
   id: 5,
   title: "Something New",
   slug: "something-new"
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3><tt>/posts/something-new</tt></h3>
-        ...?
+        <section>
+          <h3><tt>/posts/something-new</tt></h3>
+          ...?
 
-        <aside class="notes">
-          - But what if something in your routing or URL structure changes?
-        </aside>
-      </section>
+          <aside class="notes">
+            - But what if something in your routing or URL structure changes?
+          </aside>
+        </section>
 
-      <section>
-        <h1>What to do?</h1>
+        <section>
+          <h1>What to do?</h1>
 
-        <aside class="notes">
-          So, what do we do about this?
-        </aside>
-      </section>
+          <aside class="notes">
+            So, what do we do about this?
+          </aside>
+        </section>
 
-      <section>
-        <h3><tt>uor/angular-model</tt></h3>
-        <h4>(on GitHub)<span style="font-size: 50%;">&nbsp;<sup>*</sup></span></h4>
+        <section>
+          <h3><tt><a href="https://github.com/uor/angular-model">uor/angular-model</a></tt></h3>
+          <h4>(on GitHub)</h4>
 
-        <br /><br /><br />
-        <em style="font-size: 60%;">* Current code is old and broken, new release coming tomorrow</em>
-        <aside class="notes">
-          - Write a new project of course!<br />
-          - Why? Because everyone else is doing it wrong! :-)
-        </aside>
-      </section>
+          <br /><br /><br />
+          <aside class="notes">
+            - Write a new project of course!<br />
+            - Why? Because everyone else is doing it wrong! :-)
+          </aside>
+        </section>
 
-      <section>
-        <pre ng-non-bindable><code style="font-size: 120%;" class="language-js">modelProvider.model("Tasks", {
+        <section>
+          <pre ng-non-bindable><code style="font-size: 120%;" class="language-js">modelProvider.model("Tasks", {
   $instance: {
     finish: function() {
       this.completed = true;
@@ -745,146 +803,205 @@ var current = Task.query({
   }
 });</code></pre>
 
-        <aside class="notes">
-          So, does it do?<br />
-          - A simple way to attach business logic to resource endpoints<br />
-          - Leverage HTTP as it was meant to be used<br />
-          - All URLs come from the server
-        </aside>
-      </section>
+          <aside class="notes">
+            So, does it do?<br />
+            - A simple way to attach business logic to resource endpoints<br />
+            - Leverage HTTP as it was meant to be used<br />
+            - All URLs come from the server
+          </aside>
+        </section>
 
-      <section>
-        <h1>Where's the URL?</h1>
-      </section>
+        <section>
+          <h1>Where's the URL?</h1>
+        </section>
 
-      <section>
-        <h1>3 options</h1>
-      </section>
+        <section>
+          <h1>3 options</h1>
+        </section>
 
-      <section>
-        <h1>Automatic: <tt>/tasks</tt></h1>
-      </section>
+        <section>
+          <h1>Automatic: <tt>/tasks</tt></h1>
+        </section>
 
-      <section>
-        <pre ng-non-bindable><code style="font-size: 170%;" class="language-html">&lt;link
+        <section>
+          <pre ng-non-bindable><code style="font-size: 170%;" class="language-html">&lt;link
   rel="resource"
   name="Tasks"
   href="&lt;?=$this->url('Tasks'); ?&gt;"
 /&gt;</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1><tt>GET /</tt></h1>
-        <br /><br />
-        <strong><tt>Accept:<br />
-          application/vnd.resource-def+json</tt></strong>
+        <section>
+          <h1><tt>GET /</tt></h1>
+          <br /><br />
+          <strong><tt>Accept:<br />
+            application/vnd.resource-def+json</tt></strong>
 
-        <aside class="notes">
-          (Re: content type) I just made that up!
-        </aside>
-      </section>
+          <aside class="notes">
+            (Re: content type) I just made that up!
+          </aside>
+        </section>
 
-      <section>
+        <section>
 <pre ng-non-bindable><code style="font-size: 170%;" class="language-js">{
   "Tasks": "http://my.app/tasks",
   "Users": "http://my.app/users"
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h1><tt>OPTIONS /tasks</tt></h1>
-        <br /><br />
-        <strong><tt>Accept:<br />
-          application/vnd.resource-schema+json</tt></strong>
+        <section>
+          <h1><tt>OPTIONS /tasks</tt></h1>
+          <h3>(Deprecated)</h3>
+          <br /><br />
 
-        <aside class="notes">
-          (Re: content type) I just made that up!
-        </aside>
-      </section>
+          <strong><tt>Accept:<br />
+            application/vnd.resource-schema+json</tt></strong>
 
-      <section>
+          <aside class="notes">
+            (Re: content type) I just made that up!
+          </aside>
+        </section>
+
+        <section>
 <pre ng-non-bindable><code style="font-size: 170%;" class="language-js">{
   "title": "string",
   "completed": "boolean",
   ...
 }</code></pre>
+        </section>
       </section>
 
       <section>
-        <h1>More HTTP goodies</h1>
-        <h3>...that you don't need to reinvent</h3>
+        <section>
+          <h3>Buzzword Detour:<br /> "Service Oriented Architecture"</h3>
+        </section>
+
+        <section>
+          <h3>Good Ideas Apply Fractally</h3>
+        </section>
+
+        <section>
+          <h3>UI === App</h3>
+        </section>
+
+        <section>
+          <h3>URLs as Medium of Communication</h3>
+        </section>
       </section>
 
       <section>
-        <h1>HTTP <tt>Range</tt></h1><br /><br />
-        <h3><tt>GET /rickroll.mp4<br /><br />
-        Range: bytes=100-99999</tt></h3>
-      </section>
+        <section>
+          <h1>More HTTP goodies</h1>
+          <h3>...that you don't need to reinvent</h3>
+        </section>
 
-      <section>
-        <h3><tt>HEAD /posts HTTP/1.1<br /><br />
+        <section>
+          <h1>HTTP <tt>Range</tt></h1><br /><br />
+          <h3><tt>GET /rickroll.mp4<br /><br />
+          Range: bytes=100-99999</tt></h3>
+        </section>
+
+        <section>
+          <h3><tt>HEAD /posts HTTP/1.1<br /><br />
 ...<br /><br />
 HTTP 200 OK<br /><br />
 Accept-Ranges: posts</tt></h3>
-      </section>
+        </section>
 
-      <section>
-        <h3><tt>GET /posts HTTP/1.1<br /><br />
+        <section>
+          <h3><tt>GET /posts HTTP/1.1<br /><br />
 Range: posts=1-20</tt></h3>
+        </section>
+
+        <section>
+          <h1>HTTP Auth</h1>
+          <h3>Always use protection!</h3>
+        </section>
+
+        <section>
+          <h1>Caching</h1>
+          <h3>Implement any invalidation strategy you can imagine</h3>
+        </section>
+
+        <section>
+          <h4><a href="http://jsonspec.org">JSONSpec.org</a></h4>
+          <img src="img/jsonspec.png" alt="JSONSpec.org" />
+        </section>
+
+        <section>
+          <h1>PHP?</h1>
+
+          <aside class="notes">
+            So, what about the PHP code we use for this?
+          </aside>
+        </section>
+
+        <section>
+          <h3><tt>nateabele/li3_resources</tt></h3>
+          <h4>(on GitHub)</h4>
+
+          <aside class="notes">
+            - Experimental library<br />
+          </aside>
+        </section>
+
+        <section>
+          <ul>
+            <li>Automatic CRUD manipulation with verbs</li>
+            <li>Parameter mapping</li>
+            <li>Links from model relationships</li>
+            <li>Schemas with <tt>OPTIONS</tt></li>
+            <li>Proxies for mapping database values</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Coming soon...</h3>
+          <ul>
+            <li>Range pagination</li>
+            <li>Smart search with <tt>?q=...</tt></li>
+            <li>...Tests (runs away)</li>
+          </ul>
+        </section>
       </section>
 
       <section>
-        <h1>HTTP Auth</h1>
-        <h3>Always use protection!</h3>
+        <section>
+          <img src="img/koriyama.jpg" alt="Akihito Koriyama" />
+        </section>
+
+        <section>
+          <h3><a href="github.com/koriym/BEAR.Sunday">koriym/BEAR.Sunday</a></h3>
+        </section>
+
+        <section>
+          <img src="img/resource-browser.png" />
+        </section>
+
+        <section>
+          <img src="img/resource-inspector.png" />
+        </section>
+
+        <section>
+          <img src="img/object-graph.png" />
+        </section>
+
+        <section>
+          <img src="img/code-editor.png" />
+        </section>
       </section>
 
       <section>
-        <h1>Caching</h1>
-        <h3>Implement any invalidation strategy you can imagine</h3>
+        <h1>Questions?</h1>
       </section>
 
       <section>
-        <h1>PHP?</h1>
-        
-        <aside class="notes">
-          So, what about the PHP code we use for this?
-        </aside>
-      </section>
+        <h3>Thanks/Contact</h3>
 
-      <section>
-        <h3><tt>nateabele/li3_resources</tt></h3>
-        <h4>(on GitHub)</h4>
-
-        <aside class="notes">
-          - Experimental library<br />
-        </aside>
-      </section>
-
-      <section>
         <ul>
-          <li>Automatic CRUD manipulation with verbs</li>
-          <li>Parameter mapping</li>
-          <li>Links from model relationships</li>
-          <li>Schemas with <tt>OPTIONS</tt></li>
-          <li>Proxies for mapping database values</li>
+          <li><a href="http://twitter.com/nateabele">@nateabele</a></li>
+          <li><a href="mailto:nate@unionofrad.com">nate@unionofrad.com</a></li>
         </ul>
-      </section>
-
-      <section>
-        <h3>Coming soon...</h3>
-        <ul>
-          <li>Range pagination</li>
-          <li>Smart search with <tt>?q=...</tt></li>
-          <li>...Tests (runs away)</li>
-        </ul>
-      </section>
-
-      <section>
-      <h1>Thanks!</h1>
-      </section>
-
-      <section>
-      <h1>¿Preguntas?</h1>
       </section>
     </div>
 
